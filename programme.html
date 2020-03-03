@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horario</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        h4{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        section p{
+            color: orangered;
+            font-size: 2.2rem;
+        }
+        main div p.dia {
+            background-color: orangered;
+            color: white;
+            font-size: 1.5rem;
+        }
+        main div p.almuerzo {
+            background-color: crimson;
+            color: white;
+            font-size: 1.5rem;
+        }
+        main div p.titulo, i{
+            color: orangered;
+            text-transform: uppercase;
+        }
+        main div p{
+            text-align: center;
+        }
+        main div.cuadro{
+            border: 1px solid rgba(226, 226, 226, 0.6);
+        }
+        main div.cuadro:hover{
+            background-color: #c5c5c5;
+            transform: scale(1.1);
+        }
+        nav ul li a{
+          font-size: 80%;
+        }
+        i{
+            color: orangered;
+        }
+        .puntos{
+            font-size: 2.2rem
+        }
+        .parrafo{
+            text-align: justify;
+        }
+        
+        h5.subtitulo{
+            text-transform: uppercase;
+            color: white;
+            background-color: orangered;
+            text-align: center;
+        }
+        
+        h2{
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.4em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h2::after{
+            content: '';
+            margin: 0 auto;
+            background-image: url(./img/separador.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 30px;
+            width: 100%;
+            display: block;
+        }
+    </style>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128773448-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-128773448-1');
+        </script>
+</head>
+<body>
+    <!--Menu-->
+     <nav class="grey darken-4">
+        <div class="nav-wrapper">
+          <a href="./index.html" class="brand-logo">FIS-111</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="./index.html" ><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="./programme.html"><i class="far fa-calendar"></i> Horario</a></li>
+            <li><a href="./speaker.html" ><i class="fas fa-users"></i> Material Docente</a></li>
+            
+		 <!-- <li><a href="./Dates_Fees.html"><i class="fab fa-cc-visa"></i> Dates & Fees</a></li>
+            <li><a href="./abstract.html"><i class="far fa-address-card"></i> Abstract Submission</a></li>-->
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="./index.html" ><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="./programme.html"><i class="far fa-calendar"></i> Horario</a></li>
+        <li><a href="./speaker.html" ><i class="fas fa-users"></i> Material Docente</a></li>
+            
+	     <!-- <li><a href="./Dates_Fees.html"><i class="fab fa-cc-visa"></i> Dates & Fees</a></li>
+            <li><a href="./abstract.html"><i class="far fa-address-card"></i> Abstract Submission</a></li>-->
+      </ul><!--FIN MENU-->
+      
+    <!--TITULO DE LA PAGINA-->  
+    
+          <h2>Horarios</h2>
+    
+<main class="container row">
+   <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s4"><a class="active" href="#test1">Lunes</a></li>
+        <li class="tab col s4"><a  href="#test2">Martes</a></li>
+        <li class="tab col s4"><a href="#test3">Viernes</a></li>
+        
+      </ul>
+    </div>
+    <div id="test1">
+        <p class="dia center col s12"><i class="fas fa-calendar-alt"></i> Todos los Lunes</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Laboratorio</p>
+            <p><i class="far fa-clock"></i> 14:00-16:00</p>
+            <p><i class="fas fa-university"></i> R. Ticona</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Auxiliatura</p>
+            <p><i class="far fa-clock"></i> 16:00-17:00</p>
+            <p><i class="fas fa-chair"></i> F. Poma</p>
+        </div>
+        <!--<div class="cuadro col s6 l4">
+            <p class="titulo">Microtiming Deviations in Musical</p>
+            <p><i class="far fa-clock"></i> 09:15-10:00</p>
+            <p><i class="fas fa-user"></i> Theo Geisel</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Coherent-state based solutions</p>
+            <p><i class="far fa-clock"></i> 10:00-10:30</p>
+            <p><i class="fas fa-user"></i> Frank Grossman</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Coffe-break</p>
+            <p><i class="far fa-clock"></i> 10:30-11:00</p>
+            <p><i class="fas fa-coffee"></i></p>
+        </div>
+        <p class="dia center col s12"><i class="fas fa-chalkboard-teacher" style="color: white"></i> Parallel talks</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Weak chaos and finite time</p>
+            <p><i class="far fa-clock"></i> 11:00-11:30</p>
+            <p><i class="fas fa-user"></i> Marcus Beims</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Characterizing the exceptional 2014</p>
+            <p><i class="far fa-clock"></i> 11:00-11:30</p>
+            <p><i class="fas fa-user"></i> Elbert Macau</p>
+         </div>
+         <div class="cuadro col s6 l4">
+                <p class="titulo">Spontaneous rotation in vibrated packing</p>
+                <p><i class="far fa-clock"></i> 11:00-11:30</p>
+                <p><i class="fas fa-user"></i> Christian Moukarzel</p>
+            </div>
+            <div class="cuadro col s6 l4">
+                <p class="titulo">Semiclassical methods</p>
+                <p><i class="far fa-clock"></i> 11:30-12:00</p>
+                <p><i class="fas fa-user"></i> Juan D. Urbina</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Chaos and phase</p>
+                <p><i class="far fa-clock"></i> 11:30-12:00</p>
+                <p><i class="fas fa-user"></i> Raúl Rechtman</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">From dissipation-induced</p>
+                <p><i class="far fa-clock"></i> 11:30-12:00</p>
+                <p><i class="fas fa-user"></i> Alejandro Jenkins</p>
+             </div>
+             <p class="almuerzo center col s12"><i class="fas fa-hotel" style="color: white"></i> 12:00-14:00 Lunch Hotel Calacoto, for everybody</p>
+             <p class="dia center col s12"><i class="fas fa-chalkboard-teacher" style="color: white"></i> Parallel talks</p>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Chimera states in a Duffing oscillators chain</p>
+                <p><i class="far fa-clock"></i> 14:00-14:30</p>
+                <p><i class="fas fa-user"></i> Rene Rojas</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Bacteria driving droplets</p>
+                <p><i class="far fa-clock"></i> 14:00-14:30</p>
+                <p><i class="fas fa-user"></i> Rodrigo Soto</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Quantum chaos and quantum measurement</p>
+                <p><i class="far fa-clock"></i> 14:00-14:30</p>
+                <p><i class="fas fa-user"></i> Thomas Dittrich</p>
+                
+             </div>
+              <div class="cuadro col s6 l4">
+                <p class="titulo">The role chaotic transient in synchronization of networked</p>
+                <p><i class="far fa-clock"></i> 14:30-15:00</p>
+                <p><i class="fas fa-user"></i> Rene Medrano</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Mathematical consideration for the description</p>
+                <p><i class="far fa-clock"></i> 14:30-15:00</p>
+                <p><i class="fas fa-user"></i> Zui Oporto</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Isochronous sets in invariant control</p>
+                <p><i class="far fa-clock"></i> 14:30-15:00</p>
+                <p><i class="fas fa-user"></i> Fernando Vera</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Integrable Hierarchies, Solitons and backlund defects</p>
+                <p><i class="far fa-clock"></i> 15:00-15:30</p>
+                <p><i class="fas fa-user"></i> Jose Francisco Gomes</p>
+             </div>
+               <div class="cuadro col s6 l4">
+                <p class="titulo">Chacarterization of written language</p>
+                <p><i class="far fa-clock"></i> 15:00-15:30</p>
+                <p><i class="fas fa-user"></i> Francisco Calderon</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Chaos and hyperchaos of the Tarka an andean musical instrument</p>
+                <p><i class="far fa-clock"></i> 15:00-15:30</p>
+                <p><i class="fas fa-user"></i> Flavio Ghezzi</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Coffe-break</p>
+                <p><i class="far fa-clock"></i> 15:30-16:00</p>
+                <p><i class="fas fa-coffee"></i></p>
+             </div>
+              <p class="dia center col s12"><i class="fas fa-walking"></i>EMI Auditorium</p>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Grazing induced bifurcations</p>
+                <p><i class="far fa-clock"></i> 16:00-16:45</p>
+                <p><i class="fas fa-user"></i> Marian Wiercigroch</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">To be difined</p>
+                <p><i class="far fa-clock"></i> 16:45-17:15</p>
+                <p><i class="fas fa-user"></i> Miguel A. F. Sanjuan</p>
+             </div>
+             <p class="almuerzo center col s12"><i class="fas fa-walking"></i>17:30 from EMI: Go to UMSA</p>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">UMSA Paraninf Inaguration</p>
+                <p><i class="far fa-clock"></i> 18:30-19:00</p>
+                <p><i class="fas fa-user"></i>....</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Los Smartphones y la Enseñanza de la ciencia</p>
+                <p><i class="far fa-clock"></i> 19:00-19:30</p>
+                <p><i class="fas fa-user"></i> Arturo C. Martí</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Dinámica unicelular y población</p>
+                <p><i class="far fa-clock"></i> 19:30-20:15</p>
+                <p><i class="fas fa-user"></i> Maximino Aldana</p>
+             </div>
+             <p class="almuerzo center col s12"><i class="fas fa-walking" style="color: white"></i> 20:30 Return to EMI</p>-->
+    </div>
+     <div id="test2">
+        <p class="dia center col s12"><i class="fas fa-calendar-alt" style="color: white"></i> Todos los Martes</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Auxiliatura</p>
+            <p><i class="far fa-clock"></i> 13:00-14:00</p>
+            <p><i class="fas fa-coffee"></i> Fernando Poma</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Laboratorio</p>
+            <p><i class="far fa-clock"></i> 14:00-16:00</p>
+            <p><i class="fas fa-university"></i> René Torrez</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Auxiliatura</p>
+            <p><i class="far fa-clock"></i> 16:00-17:00</p>
+            <p><i class="fas fa-coffee"></i> Fernando Poma</p>
+        </div>
+        <!--<div class="cuadro col s6 l4">
+            <p class="titulo">Packing of circular filamentous matter</p>
+            <p><i class="far fa-clock"></i> 9:15-10:00</p>
+            <p><i class="fas fa-chair"></i> Thorsten Poeschel</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Coffe-break</p>
+            <p><i class="far fa-clock"></i> 10:00-10:30</p>
+            <p><i class="fas fa-coffee"></i></p>
+        </div>
+        <p class="dia center col s12"><i class="fas fa-chalkboard-teacher" style="color: white"></i> Parallel talks</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Rabi-like oscillations in a dissipative system</p>
+            <p><i class="far fa-clock"></i> 10:30-11:00</p>
+            <p><i class="fas fa-user"></i> Monica G. Ñustes</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Quantum thermodynamics with repeated interaction</p>
+            <p><i class="far fa-clock"></i> 10:30-11:00</p>
+            <p><i class="fas fa-user"></i> Felipe Barra</p>
+         </div>
+         <div class="cuadro col s6 l4">
+                <p class="titulo">Statistics of chaos in semiconductor lasers</p>
+                <p><i class="far fa-clock"></i> 10:30-11:00</p>
+                <p><i class="fas fa-user"></i> Jose Rios Leite</p>
+            </div>
+            <div class="cuadro col s6 l4">
+                <p class="titulo">Molecular interactions in cellular processes</p>
+                <p><i class="far fa-clock"></i> 11:00-11:30</p>
+                <p><i class="fas fa-user"></i> Viviana Monje</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Right triangular billiards, the tehte ansatz and a semiclassical</p>
+                <p><i class="far fa-clock"></i> 11:00-11:30</p>
+                <p><i class="fas fa-user"></i> Marcos G. da Luz</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Rare events in coupled lasers (Carlos Lambruschini)</p>
+                <p><i class="far fa-clock"></i> 11:00-11:30</p>
+                <p><i class="fas fa-user"></i> Carlos Leopoldo Pando Lambruschini</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Electrocatalytic oscillations on model surfaces</p>
+                <p><i class="far fa-clock"></i> 11:30-12:00</p>
+                <p><i class="fas fa-user"></i> Hamilton Varela</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Statistical properties of microwave backscattering</p>
+                <p><i class="far fa-clock"></i> 11:30-12:00</p>
+                <p><i class="fas fa-user"></i> Flavio M de Aguiar</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Secure transmission of information through coexisting chaotic attractors</p>
+                <p><i class="far fa-clock"></i> 11:00-11:30</p>
+                <p><i class="fas fa-user"></i> Rider Jaimes Reátegui</p>
+             </div>
+             <p class="almuerzo center col s12"><i class="fas fa-hotel" style="color: white"></i> 12:00-14:00 Lunch Hotel Calacoto, for everybody</p>
+             <p class="dia center col s12"><i class="fas fa-chalkboard-teacher" style="color: white"></i> Parallel talks</p>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Binary black hotel shadows: Chaos in general relativity</p>
+                <p><i class="far fa-clock"></i> 14:00-14:50</p>
+                <p><i class="fas fa-user"></i> Miguel A. F. Sanjuan</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Mathematical billiards. Results and methods</p>
+                <p><i class="far fa-clock"></i> 14:00-14:50</p>
+                <p><i class="fas fa-user"></i> Roberto Markarian</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Flocking in open space: the roles of long-range interactions</p>
+                <p><i class="far fa-clock"></i> 14:00-14:30</p>
+                <p><i class="fas fa-user"></i> Maximino Aldana</p>
+                
+             </div>
+              <div class="cuadro col s6 l4">
+                <p class="titulo">Models and experiments on pedestrian evacuation</p>
+                <p><i class="far fa-clock"></i> 14:30-15:00</p>
+                <p><i class="fas fa-user"></i> Marcelo Kuperman</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">The resonant structure of galaxy discs</p>
+                <p><i class="far fa-clock"></i> 14:50-15:40</p>
+                <p><i class="fas fa-user"></i> Etiénne Beckman</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Bifurcations in random dynamical systems</p>
+                <p><i class="far fa-clock"></i> 14:50-15:40</p>
+                <p><i class="fas fa-user"></i> Jeroen Lamb</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Spatial organization and survival of single species populations</p>
+                <p><i class="far fa-clock"></i> 15:00-15:30</p>
+                <p><i class="fas fa-user"></i> Celia Antenodo</p>
+             </div>
+               <div class="cuadro col s6 l4">
+                <p class="titulo">Fractal Analysis of a Galaxy Distribution</p>
+                <p><i class="far fa-clock"></i> 15:40-16:00</p>
+                <p><i class="fas fa-user"></i> Gabriela Conde</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">The Schwarzian derivative and singer's theorem</p>
+                <p><i class="far fa-clock"></i> 15:40-16:00</p>
+                <p><i class="fas fa-user"></i> Jimmy Santamaria</p>
+             </div>
+              <div class="cuadro col s6 l4">
+                <p class="titulo">Mathematical models of extinction and coexistence in complex</p>
+                <p><i class="far fa-clock"></i> 15:30-16:00</p>
+                <p><i class="fas fa-user"></i> Maria Fabiana Laguna</p>
+             </div>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Coffe-break</p>
+                <p><i class="far fa-clock"></i> 16:00-16:30</p>
+                <p><i class="fas fa-coffee"></i></p>
+             </div>
+              <p class="dia center col s12"><i class="fas fa-university" style="color: white"></i> EMI Auditorium</p>
+             <div class="cuadro col s6 l4">
+                <p class="titulo">Abrupt epidemic spreading</p>
+                <p><i class="far fa-clock"></i> 16:30-17:15</p>
+                <p><i class="fas fa-user"></i> Hans Herrmann</p>
+             </div>
+            
+             <p class="almuerzo center col s12"><i class="fas fa-walking" style="color: white"></i> 17:30 from EMI: Go to Jardin Japones</p>
+             <p class="almuerzo center col s12"><i class="fas fa-walking" style="color: white"></i> 18:15 from Calacoto Hotel: Go to Jardin Japones</p>
+             
+             <p class="dia center col s12"><i style="color: white" class="fas fa-utensils"></i> 19:00-22:00 Dinner, Jardin Japones - Irpavi</p>-->
+    </div>
+    <!--<div id="test3">
+        <p class="dia center col s12"><i style="color: white" class="fas fa-calendar-alt"></i> Thursday, 24th october 2019</p>
+        <p class="almuerzo center col s12"><i class="fas fa-users" style="color: white"></i> 07:45 Meeting at the green cable car station "Irpavi" (near EMI) to the cable-car auditorium</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Buldous plants precisely mesasure the length of winter</p>
+            <p><i class="far fa-clock"></i> 09:00-09:30</p>
+            <p><i class="fas fa-user"></i> Imre M. Jánosi</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Nested sequences of arithmetic progressions in a discrete neuron</p>
+            <p><i class="far fa-clock"></i> 9:30-10:00</p>
+            <p><i class="fas fa-user"></i> Jason Gallas</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Traveling amplitude death in coupled pendula</p>
+            <p><i class="far fa-clock"></i> 10:00-10:30</p>
+            <p><i class="fas fa-user"></i> Thomasz Kapitaniak</p>
+        </div>
+         <div class="cuadro col s6 l4">
+            <p class="titulo">Coffe-break</p>
+            <p><i class="far fa-clock"></i> 10:30-11:00</p>
+            <p><i class="fas fa-coffee"></i></p>
+        </div>
+        <p class="dia center col s12"><i class="fas fa-bus" style="color: white"></i> 11:00 Touristic tour, Will be take in charge by guides directly from Faro Murillo Station Time of return according to the tour</p>
+        
+    </div>-->
+    
+    <!--<div id="test4">
+        <p class="dia center col s12"><i style="color: white" class="fas fa-calendar-alt"></i> Friday, 25th october 2019</p>
+        <p class="almuerzo center col s12"><i class="fas fa-university" style="color: white"></i> EMI auditorium</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Learning to soar like a bird</p>
+            <p><i class="far fa-clock"></i> 08:30-09:15</p>
+            <p><i class="fas fa-user"></i> Antonio Celani</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Insects are not particles: collective decision-making and idiosyncrasy</p>
+            <p><i class="far fa-clock"></i> 9:15-10:00</p>
+            <p><i class="fas fa-user"></i> Jean-Louis Deneubourg</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Coffe-break</p>
+            <p><i class="far fa-clock"></i> 10:00-10:30</p>
+            <p><i class="fas fa-coffee"></i></p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Chaotic diffusion for a family of area preserving mappings</p>
+            <p><i class="far fa-clock"></i> 10:30-11:00</p>
+            <p><i class="fas fa-user"></i> Edson Denis Leonel</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">To be defined</p>
+            <p><i class="far fa-clock"></i> 11:00-11:30</p>
+            <p><i class="fas fa-user"></i> To be defined</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">To be defined</p>
+            <p><i class="far fa-clock"></i> 11:30-12:00</p>
+            <p><i class="fas fa-user"></i> To be defined</p>
+        </div>
+         
+        <p class="almuerzo center col s12"><i class="fas fa-hotel" style="color: white"></i> 12:00-14:00 Lunch, Hotel Calacoto, for everybody</p>
+        <p class="dia center col s12"><i class="fas fa-chalkboard-teacher" style="color: white"></i>  Parallel talks</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Quantifying time-dependent</p>
+            <p><i class="far fa-clock"></i> 14:00-14:30</p>
+            <p><i class="fas fa-user"></i> Pablo Balenzuela</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Nonlinear Fokker-Plank equation</p>
+            <p><i class="far fa-clock"></i> 14:00-14:30</p>
+            <p><i class="fas fa-user"></i> Sergio Curilef</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Recurrence entropy</p>
+            <p><i class="far fa-clock"></i> 14:00-14:30</p>
+            <p><i class="fas fa-user"></i> Sergio Roberto Lopes</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Cellular Automata for car traffic</p>
+            <p><i class="far fa-clock"></i> 14:30-15:00</p>
+            <p><i class="fas fa-user"></i> Jose Daniel Muñoz</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Itinerary sychronization</p>
+            <p><i class="far fa-clock"></i> 14:30-15:00</p>
+            <p><i class="fas fa-user"></i> Eric Campos</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Inferring the dynamics of systems</p>
+            <p><i class="far fa-clock"></i> 14:30-15:00</p>
+            <p><i class="fas fa-user"></i> Rok Cestnik</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Self-organization in one-dimensional</p>
+            <p><i class="far fa-clock"></i> 15:00-15:30</p>
+            <p><i class="fas fa-user"></i> Victor Dossetti</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Inference of direct links</p>
+            <p><i class="far fa-clock"></i> 15:00-15:30</p>
+            <p><i class="fas fa-user"></i> Arturo C. Martí</p>
+        </div>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Thermodynamics of nonequilibrium</p>
+            <p><i class="far fa-clock"></i> 15:00-15:30</p>
+            <p><i class="fas fa-user"></i> Tim Herpich</p>
+        </div>
+        
+    </div>-->
+    <div id="test3">
+        <p class="dia center col s12"><i class="fas fa-calendar-alt" style="color: white"></i> Todos los Viernes</p>
+        <div class="cuadro col s6 l4">
+            <p class="titulo">Programación</p>
+            <p><i class="far fa-clock"></i> 12:00-13:00</p>
+            <p><i class="fas fa-coffee"></i> Fernando Poma</p>
+        </div>
+        </div>
+    </main>
+    
+    <!--<div id="test5">
+        <div class="container">
+            <img src="./img/trabajando.gif" class="responsive-img center-align" style="display: block; margin: auto" alt="">
+           <h3 style="text-transform: uppercase; font-size: 1.2em;" class="center-align">we are working!</h3>
+        </div>
+    </div>-->    
+<!--Footer-->
+<footer class="grey darken-4 page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">FIS-111, I/2020</h5>
+          <p class="grey-text text-lighten-4">Laboratorio de física básica, tiene como objetivo introducir a los estudiantes al área de investigación, comenzando así su larga trayectoria en la vida profesional en publicaciones y reportes científicos acerca de todas las áreas de investigación que tiene la carrera de física.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Dirección</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="fas fa-map-marked-alt"></i> Carrera de Física, Campus universitario, calle 27, Cota cota- La Paz</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="fas fa-phone"></i> (+591-2) 2612801</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="far fa-envelope"></i> fpoma@fiumsa.edu.bo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020, All rights reserved - |Carrera de Física|. 
+      <a class="grey-text text-lighten-4 right" href="http://www.fiumsa.edu.bo"><i class="fas fa-university"></i> Carrera de Física</a>
+      </div>
+    </div>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+            $(function() {
+                  document.addEventListener('DOMContentLoaded', function(){
+                  M.AutoInit();
+                  });
+                  $('.sidenav').sidenav();
+                $('.tabs').tabs();
+            });
+    </script>
+</body>
+</html>
